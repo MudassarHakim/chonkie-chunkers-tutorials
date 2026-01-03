@@ -1,10 +1,10 @@
 # Chonkie Tutorials
 
-Comprehensive Jupyter notebook tutorials for learning Chonkie - the lightweight RAG chunking library. Includes beginner-friendly chunkers tutorial and advanced features for production RAG systems.
+Comprehensive Jupyter notebook tutorials for learning Chonkie - the lightweight RAG chunking library. Includes beginner-friendly chunkers tutorial covering various strategies.
 
 ## Tutorials
 
-### 1. Chunkers Tutorial (Beginner)
+### Chunkers Tutorial (Beginner)
 **File:** `notebooks/chonkie_complete_tutorial.ipynb`
 
 Learn all 9 Chonkie chunking strategies:
@@ -13,54 +13,27 @@ Learn all 9 Chonkie chunking strategies:
 - Semantic chunkers (Semantic, Late, Neural)
 - Advanced chunker (Slumber - LLM-powered)
 
-### 2. Advanced Tutorial (Intermediate)
-**File:** `notebooks/chonkie_advanced_tutorial.ipynb`
-**Prerequisites:** Complete chunkers tutorial first
-
-Master production RAG features:
-- Refineries (OverlapRefinery, EmbeddingsRefinery)
-- Porters (JSONPorter, DatasetsPorter)
-- Handshakes (ChromaDB, Pinecone, and more)
-- Complete end-to-end RAG pipelines
-
-## Documentation
-
-### Theoretical Concepts Guide
-**File:** `docs/chunkers-theoretical-concepts.md`
-
-Comprehensive theoretical documentation covering:
-- **Detailed algorithms** for all 9 chunkers
-- **Mathematical foundations** (embeddings, similarity metrics, information theory)
-- **Performance analysis** (speed, quality, cost trade-offs)
-- **Use case recommendations** and best practices
-- **RAG optimization theory** and retrieval metrics
-- **Comparative analysis** and decision frameworks
-
-Perfect for students and developers who want to deeply understand the theory behind each chunking strategy.
-
-[Read the Theoretical Concepts Guide →](docs/chunkers-theoretical-concepts.md)
-
 ## Prerequisites
 
 - Intermediate Python knowledge
 - Basic understanding of NLP concepts
 - Familiarity with Jupyter notebooks
 - **Required:** Google Gemini API key (free tier available)
-- **Optional:** Pinecone API key (for advanced tutorial, free tier available)
 
 ## Setup Instructions
 
 ### 1. Clone or Download
 
 ```bash
+git clone https://github.com/MudassarHakim/chonkie-chunkers-tutorials.git
 cd chonkie-chunkers-tutorials
 ```
 
 ### 2. Create Virtual Environment
 
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 ```
 
 ### 3. Install Dependencies
@@ -72,15 +45,13 @@ pip install -r requirements.txt
 ### 4. Configure API Keys
 
 1. Get your free Gemini API key from https://makersuite.google.com/app/apikey
-2. (Optional) Get Pinecone API key from https://www.pinecone.io/ for advanced tutorial
-3. Copy `.env.example` to `.env`:
+2. Copy `.env.example` to `.env`:
    ```bash
    cp .env.example .env
    ```
-4. Edit `.env` and add your API keys:
+3. Edit `.env` and add your Gemini API key:
    ```
    GEMINI_API_KEY=your_actual_api_key_here
-   PINECONE_API_KEY=your_pinecone_api_key_here  # Optional
    ```
 
 ### 5. Launch Jupyter Notebooks
@@ -90,20 +61,12 @@ pip install -r requirements.txt
 jupyter notebook notebooks/chonkie_complete_tutorial.ipynb
 ```
 
-**Then try advanced tutorial:**
-```bash
-jupyter notebook notebooks/chonkie_advanced_tutorial.ipynb
-```
-
 ## Project Structure
 
 ```
 chonkie-chunkers-tutorials/
 ├── notebooks/
-│   ├── chonkie_complete_tutorial.ipynb    # Beginner: All 9 chunkers
-│   └── chonkie_advanced_tutorial.ipynb    # Advanced: Refineries, Porters, Handshakes
-├── docs/
-│   └── chunkers-theoretical-concepts.md   # Theoretical foundations and algorithms
+│   └── chonkie_complete_tutorial.ipynb    # Beginner: All 9 chunkers
 ├── data/
 │   ├── sample_technical_doc.txt           # API documentation
 │   ├── sample_research_paper.txt          # Research paper
@@ -111,11 +74,10 @@ chonkie-chunkers-tutorials/
 │   └── sample_table.md                    # Markdown table
 ├── requirements.txt                       # All dependencies
 ├── .env.example                           # API key template
-├── CLAUDE.md                              # Guide for Claude Code
 └── README.md                              # This file
 ```
 
-## Tutorial Overviews
+## Tutorial Overview
 
 ### Chunkers Tutorial 
 
@@ -127,15 +89,6 @@ chonkie-chunkers-tutorials/
 6. **Comparative Analysis** - Performance metrics and comparisons
 7. **Best Practices** - Chunker selection guide, use cases
 8. **Exercises & Next Steps** - Hands-on practice
-
-### Advanced Tutorial
-
-1. **Introduction & Setup** - Advanced features overview
-2. **Refineries** - OverlapRefinery, EmbeddingsRefinery, Pipeline chaining
-3. **Porters** - JSONPorter, DatasetsPorter, data export
-4. **Handshakes** - ChromaDB, Pinecone, complete RAG workflow
-5. **Best Practices** - Production patterns, cost optimization
-6. **Exercises** - Hands-on advanced projects
 
 ## Features
 
@@ -179,4 +132,4 @@ This tutorial is provided as-is for educational purposes.
 
 - Chonkie: 1.5.0
 - Tutorial Version: 1.0.0
-- Last Updated: December 2025
+- Last Updated: January 2026
